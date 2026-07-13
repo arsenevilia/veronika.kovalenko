@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Звіт по співпрацях · Вероніка Коваленко</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Manrope',sans-serif; background:#F7F8FB; color:#232733; line-height:1.6; padding:48px 24px; }
+  .wrap { max-width:920px; margin:0 auto; }
+  .head { text-align:center; margin-bottom:40px; }
+  .head .tag { display:inline-block; font-size:12px; letter-spacing:.15em; text-transform:uppercase; color:#6B84C8; font-weight:700; margin-bottom:12px; }
+  .head h1 { font-size:34px; font-weight:800; letter-spacing:-.02em; margin-bottom:8px; }
+  .head p { color:#7E8598; font-size:15px; }
+  .period { display:inline-block; margin-top:14px; padding:6px 16px; border-radius:20px; background:#E6ECF9; color:#4A66B0; font-size:13px; font-weight:600; }
+  .section-title { font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:#4A66B0; font-weight:700; margin:44px 0 18px; padding-bottom:10px; border-bottom:1px solid #E2E7F1; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .kpi { background:#fff; border-radius:16px; padding:22px 18px; text-align:center; box-shadow:0 2px 14px rgba(120,140,180,.08); border:1px solid #EAEFF6; }
+  .kpi .num { font-size:32px; font-weight:800; color:#4A66B0; letter-spacing:-.02em; }
+  .kpi .lbl { font-size:12.5px; color:#7E8598; margin-top:4px; font-weight:500; }
+  .kpi.green .num { color:#5B9B78; }
+  .callout { background:linear-gradient(135deg,#EEF3FC,#F0F4F0); border-radius:16px; padding:22px 24px; margin:18px 0; border:1px solid #E2EAF3; }
+  .callout strong { color:#4A66B0; }
+  .stage-banner { background:linear-gradient(135deg,#4A66B0,#6B84C8); color:#fff; border-radius:18px; padding:26px 28px; text-align:center; margin-bottom:8px; }
+  .stage-banner .s { font-size:12px; letter-spacing:.15em; text-transform:uppercase; opacity:.85; font-weight:600; }
+  .stage-banner h2 { font-size:22px; font-weight:800; margin:6px 0; }
+  .stage-banner p { font-size:14px; opacity:.92; max-width:640px; margin:0 auto; }
+  .funnel { background:#fff; border-radius:16px; padding:24px; border:1px solid #EAEFF6; box-shadow:0 2px 14px rgba(120,140,180,.07); }
+  .fbar { margin-bottom:14px; } .fbar:last-child { margin-bottom:0; }
+  .fbar .top { display:flex; justify-content:space-between; font-size:14px; margin-bottom:5px; font-weight:600; }
+  .fbar .top .v { color:#7E8598; font-weight:500; }
+  .track { height:11px; background:#EDF0F6; border-radius:6px; overflow:hidden; }
+  .fill { height:100%; border-radius:6px; }
+  table { width:100%; border-collapse:collapse; background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 14px rgba(120,140,180,.07); border:1px solid #EAEFF6; }
+  th { background:#EDF1F9; color:#5A6788; font-size:12px; text-transform:uppercase; letter-spacing:.05em; text-align:left; padding:12px 16px; font-weight:700; }
+  td { padding:11px 16px; border-top:1px solid #EFF2F8; font-size:14px; vertical-align:top; }
+  .brands { color:#65708A; font-size:13.5px; }
+  .catrow td:first-child { font-weight:700; white-space:nowrap; }
+  .num-cell { font-weight:700; color:#4A66B0; text-align:center; }
+  .roadmap { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .rm { background:#fff; border-radius:16px; padding:20px; border:1px solid #EAEFF6; box-shadow:0 2px 14px rgba(120,140,180,.07); position:relative; }
+  .rm .badge { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:4px 10px; border-radius:12px; display:inline-block; margin-bottom:10px; }
+  .rm h3 { font-size:16px; font-weight:700; margin-bottom:8px; }
+  .rm p { font-size:13.5px; color:#65708A; line-height:1.6; }
+  .rm.now .badge { background:#DEEAFB; color:#3A5BA0; }
+  .rm.next .badge { background:#E4F1E9; color:#4A8567; }
+  .rm.later .badge { background:#F0ECF8; color:#7A5BA0; }
+  .foot { text-align:center; margin-top:40px; color:#A5AEC0; font-size:13px; }
+  @media(max-width:720px){ .kpis{grid-template-columns:repeat(2,1fr);} .roadmap{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <div class="tag">ENKO × Вероніка Коваленко</div>
+    <h1>Звіт по роботі з брендами</h1>
+    <p>Ексклюзивна співпраця · вихідні розсилки та підготовка пайплайну</p>
+    <div class="period">Період: з 17.06 — старт напрямку</div>
+  </div>
+
+  <!-- STAGE BANNER -->
+  <div class="stage-banner">
+    <div class="s">Поточна фаза</div>
+    <h2>Запуск та «підігрів» бази</h2>
+    <p>Пройшов майже місяць від старту. Це етап, коли база зібрана, сегментована й отримала перші дотики. Активні перемовини за досвідом стартують з другого місяця роботи — саме туди зараз дозріває воронка.</p>
+  </div>
+
+  <div class="section-title">Головне за перший місяць</div>
+  <div class="kpis">
+    <div class="kpi"><div class="num">49</div><div class="lbl">брендів у роботі</div></div>
+    <div class="kpi"><div class="num">8</div><div class="lbl">категорій охоплено</div></div>
+    <div class="kpi green"><div class="num">100%</div><div class="lbl">бази відпрацьовано</div></div>
+    <div class="kpi"><div class="num">3</div><div class="lbl">перші пропозиції</div></div>
+  </div>
+
+  <div class="callout">
+    Старт ексклюзивної співпраці — <strong>17 червня</strong>. За цей час зібрано й сегментовано базу під естетику та аудиторію Вероніки, запущено першу хвилю вихідної розсилки та розпочато цикл фоловапів. Це фундамент, на якому будуються угоди наступних місяців.
+  </div>
+
+  <!-- FUNNEL -->
+  <div class="section-title">Воронка · де зараз кожен бренд</div>
+  <div class="funnel">
+    <div class="fbar">
+      <div class="top"><span>Розіслано першу хвилю</span><span class="v">49 · 100%</span></div>
+      <div class="track"><div class="fill" style="width:100%;background:#8CA4DA;"></div></div>
+    </div>
+    <div class="fbar">
+      <div class="top"><span>Перший контакт · триває цикл фоловапів</span><span class="v">28</span></div>
+      <div class="track"><div class="fill" style="width:57%;background:#7A93CF;"></div></div>
+    </div>
+    <div class="fbar">
+      <div class="top"><span>На етапі 2–3 дотику (дозрівають)</span><span class="v">13</span></div>
+      <div class="track"><div class="fill" style="width:27%;background:#6B84C8;"></div></div>
+    </div>
+    <div class="fbar">
+      <div class="top"><span>Вступили в діалог</span><span class="v">8</span></div>
+      <div class="track"><div class="fill" style="width:16%;background:#4A66B0;"></div></div>
+    </div>
+    <div class="fbar">
+      <div class="top"><span>Пропозиції надіслані</span><span class="v">3</span></div>
+      <div class="track"><div class="fill" style="width:8%;background:#3A5BA0;"></div></div>
+    </div>
+  </div>
+  <div class="callout">
+    По кожному бренду ведеться робота у <strong>4 повідомлення</strong>: 1 вихідне та 3 фоловапи — це обʼємна, послідовна комунікація, яка й дає результат. Більшість брендів зараз саме на цих проміжних дотиках, тому основна маса відповідей і перемовин очікується на наступному етапі.
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="section-title">Охоплені категорії · сегментація під Вероніку</div>
+  <table>
+    <tr><th>Категорія</th><th style="width:70px;text-align:center">Брендів</th><th>Приклади</th></tr>
+    <tr class="catrow"><td>💄 Косметика / макіяж</td><td class="num-cell">10</td><td class="brands">MakeUp, Marie Fresh, SINART, TopBeauty, Bless Beauty, Golden 5, Hedonic beauty…</td></tr>
+    <tr class="catrow"><td>🧴 Скінкейр / догляд</td><td class="num-cell">8</td><td class="brands">The Body Shop, Sister's Aroma, Skintra, Aromaya, Aromateque, Lipo Bar…</td></tr>
+    <tr class="catrow"><td>🍬 Їжа / healthy-ніша</td><td class="num-cell">9</td><td class="brands">Bee granola, Cherry Berry, Bee Lab, Nature's Charm, Bob Snail, MOJAM…</td></tr>
+    <tr class="catrow"><td>🩰 Подарунки / lifestyle</td><td class="num-cell">9</td><td class="brands">БК Квітка, GiftClub, Kashalot gift, GiftBox, Gifty, Sunflower…</td></tr>
+    <tr class="catrow"><td>💍 Прикраси / аксесуари / сумки</td><td class="num-cell">6</td><td class="brands">Bags dereve, Sprut Design, kallini, looko space, STÚDIO BAGS, Ama Bags</td></tr>
+    <tr class="catrow"><td>👙 Одяг / купальники</td><td class="num-cell">3</td><td class="brands">СЕТ, Answear.ua, New Look</td></tr>
+    <tr class="catrow"><td>🥤 Напої / ніша-дрінк</td><td class="num-cell">2</td><td class="brands">wild.kombucha, wonderfull.coffee</td></tr>
+    <tr class="catrow"><td>🌸 Парфуми / аромати</td><td class="num-cell">2</td><td class="brands">13perfumes, Away Today</td></tr>
+  </table>
+
+  <!-- ROADMAP -->
+  <div class="section-title">Що далі · план дозрівання воронки</div>
+  <div class="roadmap">
+    <div class="rm now">
+      <div class="badge">Зараз · місяць 1</div>
+      <h3>Підігрів бази</h3>
+      <p>Завершуємо цикли фоловапів по першій хвилі. Кожен бренд отримує повну послідовність із 4 дотиків, база «прогрівається» до діалогу.</p>
+    </div>
+    <div class="rm next">
+      <div class="badge">Місяць 2</div>
+      <h3>Активні перемовини</h3>
+      <p>За досвідом саме на другий місяць база дозріває: перші дотики перетворюються на діалоги, пропозиції та узгодження умов. Це очікуваний етап зростання.</p>
+    </div>
+    <div class="rm later">
+      <div class="badge">Далі</div>
+      <h3>Нові категорії + реактивація</h3>
+      <p>Захоплюємо нові сегменти брендів і повертаємось до тих, хто не відповів: ~20% воронки стабільно оживає при виході на кооперейшн-акаунт або новий контакт.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <strong>Важливо про темп.</strong> ~20% брендів, які мовчать на першому дотику, за досвідом повертаються в діалог, коли ми виходимо на їхній кооперейшн-акаунт або знаходимо нову контактну особу. Тому воронка не «застигає» — вона продовжує працювати навіть по тих, хто зараз не відповів.
+  </div>
+
+  <div class="foot">
+    Звіт підготовлено ENKO · комерційний напрямок<br>
+    Напрямок на старті — база підігріта, воронка дозріває до активних перемовин
+  </div>
+
+</div>
+</body>
+</html>
